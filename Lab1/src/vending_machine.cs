@@ -122,25 +122,25 @@ public class VendingMachine
             collectedMoney = 0;
         }
     }
-        // Trả về số tiền hiện tại
+        // Возвращает текущую сумму
     public int GetBalance() => balance;
 
-        // Trả về tổng số tiền máy đã thu
+        // Возвращает общую сумму, собранную автоматом
     public int GetCollectedMoney() => collectedMoney;
 
-        // Trả về số lượng sản phẩm theo index
+        // Возвращает количество товаров по индексу
     public int GetProductQuantity(int index) => products[index - 1].Quantity;
 
-        // Trả về giá sản phẩm theo index
+        // Возвращает цену товаров по индексу
     public int GetProductPrice(int index) => products[index - 1].Price;
 
-        // Admin helper: thêm sản phẩm
+        // Помощник администратора: добавить товары
     public void AdminAddProduct(int index, int qty)
     {
         products[index - 1].Quantity += qty;
     }
 
-        // Admin helper: thu tiền
+        // Помощник администратора: собрать деньги
     public int AdminCollectMoney()
     {
         int money = collectedMoney;
